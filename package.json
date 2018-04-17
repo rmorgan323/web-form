@@ -1,7 +1,7 @@
 {
-  "name": "hhbuilder",
+  "name": "homebuilder",
   "version": "1.0.0",
-  "description": "Household builder =================",
+  "description": "Homebuilder - data validation app",
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open"
