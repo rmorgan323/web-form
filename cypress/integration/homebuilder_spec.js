@@ -4,7 +4,7 @@ describe('HHBuilder end-to-end tests', function () {
   });
 
   it('should contain specific elements', function () {
-    cy.title().should('include', 'Household builder');
+    cy.title().should('include', 'HOME BUILDER');
     cy.get('input[name="age"]').should('exist');
     cy.get('select[name="rel"]').should('exist');
     cy.get('input[name="smoker"]').should('exist');
@@ -65,9 +65,9 @@ describe('HHBuilder end-to-end tests', function () {
     cy.get('select[name="rel"]').select('Child');
     cy.get('.add').click();
 
-    cy.get('.member-profile > h4').should('have.text', 'child');
-    cy.get('.member-profile > p').eq(0).should('have.text', 'Age: 12');
-    cy.get('.member-profile > p').eq(1).should('have.text', 'Non-smoker');
+    cy.get('.member-profile > h4').eq(0).should('have.text', 'child');
+    cy.get('.member-profile > h4').eq(1).should('have.text', 'Age: 12');
+    cy.get('.member-profile > h4').eq(2).should('have.text', 'Non-smoker');
   });
 
   it('should be able to add multiple members', function () {
