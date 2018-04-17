@@ -107,12 +107,11 @@ function displayMember(age, rel, smk) {
   var memberId = Date.now();
   var newMem = document.createElement('article');
 
-  newMem.setAttribute('style', 'background: #eee;');
   newMem.classList.add('member-profile');
   newMem.innerHTML = (
     '<h4 data-age=' + age + ' data-rel=' + rel + ' data-smoker=' + smk + '>' + rel + '</h4>' +
-    '<p>Age: ' + age + '</p>' + 
-    '<p>' + smokeStatus + '</p>' + 
+    '<h4>Age: ' + age + '</h4>' + 
+    '<h4>' + smokeStatus + '</h4>' + 
     '<button class="delete-member" id="member-' + memberId + '">delete member</button>'
   );
 
@@ -135,7 +134,7 @@ function displayError(type, loc) {
     var newErr = document.createElement('span');
 
     newErr.classList.add(locs[loc].className);
-    newErr.setAttribute('style', "color:red");
+    newErr.setAttribute('style', "color:#e1687f");
     newErr.innerText = types[type];
 
     document.querySelector(locs[loc].element + '[name=' + loc + ']')

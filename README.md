@@ -1,5 +1,7 @@
-Web Form
+## Web Form
 
-This is a form validation app written in strict es5.
+This is a basic form validation app written in strict es5.
 
-It uses Cypress.io for end-to-end testing.
+I used it to learn end-to-end testing with Cypress.io (which, by the way, is pretty awesome).
+
+![screenshot]('home-builder-ss.png')
