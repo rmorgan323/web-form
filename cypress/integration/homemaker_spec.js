@@ -1,10 +1,10 @@
-describe('HHBuilder end-to-end tests', function () {
+describe('HomeMaker integration tests and end-to-end tests', function () {
   beforeEach(function () {
     cy.visit('/index.html');
   });
 
   it('should contain specific elements', function () {
-    cy.title().should('include', 'HOME BUILDER');
+    cy.title().should('include', 'HOME MAKER');
     cy.get('input[name="age"]').should('exist');
     cy.get('select[name="rel"]').should('exist');
     cy.get('input[name="smoker"]').should('exist');
@@ -20,6 +20,9 @@ describe('HHBuilder end-to-end tests', function () {
   });
 
   it('should require values for age and relationship', function () {
+    cy.get('.age-msg').should('not.exist');
+    cy.get('.rel-msg').should('not.exist');
+
     cy.get('.add').click();
     cy.get('.age-msg').should('have.text', '* Required');
     cy.get('.rel-msg').should('have.text', '* Required');
